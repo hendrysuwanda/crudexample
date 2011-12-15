@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+
+	<servlet>
+		<servlet-name>SimpleCRUD</servlet-name>
+		<servlet-class>com.hendrysuwanda.simplecrud.SimpleCRUDServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SimpleCRUD</servlet-name>
+		<url-pattern>/simplecrud</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>contact</servlet-name>
+		<servlet-class>com.hendrysuwanda.simplecrud.servlet.ContactServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>contact</servlet-name>
+		<url-pattern>/contact</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>addcontact</servlet-name>
+		<servlet-class>com.hendrysuwanda.simplecrud.servlet.AddContactServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>addcontact</servlet-name>
+		<url-pattern>/contact/add</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>updatecontact</servlet-name>
+		<servlet-class>com.hendrysuwanda.simplecrud.servlet.UpdateContactServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>updatecontact</servlet-name>
+		<url-pattern>/contact/update</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>deletecontact</servlet-name>
+		<servlet-class>com.hendrysuwanda.simplecrud.servlet.DeleteContactServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>deletecontact</servlet-name>
+		<url-pattern>/contact/delete</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
